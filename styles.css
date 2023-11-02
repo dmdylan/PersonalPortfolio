@@ -5,6 +5,14 @@
   --red: #AB4562;
   --whiteish: #F6F9F9;
   --blackish: #262936;
+
+
+}
+
+*
+{
+  /* background: rgba(0, 100, 0, .1) !important; */
+    outline: 1px solid limegreen !important;
 }
 
 html
@@ -13,6 +21,7 @@ html
   box-sizing: border-box;
   color: var(--whiteish);
   scroll-behavior: smooth;
+
 }
 
 body
@@ -75,13 +84,13 @@ body
   width: 50%;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .welcome-section-headers
 {
   position: relative;
-  padding: 0;
-  margin-top: 50vh;
+  padding: 40vh 0 0;
 }
 
 .welcome-section-headers h1
@@ -100,16 +109,29 @@ body
   color: var(--red);
 }
 
+.welcome-section-headers h3
+{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  color: var(--light-blue)
+}
+
 .projects-section
 {
+  position: relative;
   width: 100%;
   margin: 0 auto;
+  padding: 5% 0 0;
   background-color: var(--whiteish);
   min-height: 100vh;
 }
 
 .projects-section h2
 {
+  position: relative;
+  margin-top: 1000px;
+  margin: 0;
   text-align: center;
   text-decoration: underline;
   color: var(--blackish);
