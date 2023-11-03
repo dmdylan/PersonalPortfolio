@@ -148,6 +148,12 @@ body
   background-color: var(--blackish);
 }
 
+.project-img-container
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .contact-section a
 {
   color: inherit;
