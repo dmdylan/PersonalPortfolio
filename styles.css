@@ -157,7 +157,7 @@ body
 
 .project-text
 {
-  position: relative;
+  position: absolute;
   float: left;
   width: 50%;
   height: 100%;
@@ -177,7 +177,7 @@ body
   width: 50%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: auto auto;
   gap: 1rem;
 }
 
