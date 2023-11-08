@@ -148,27 +148,32 @@ body
   margin: auto;
   padding: 0 2rem;
   background-color: var(--blackish);
-  display: flex;
+  display: grid;
   gap: 2rem;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(25%, 30%);
 }
 
 .project
 {
-  width: 20%;
-  height: min-content;
+  width: 100%;
+  height: 100%;
+  /* height: min-content; */
   border: 2px solid var(--whiteish);
 }
 
 .project-text
 {
-  /* width: 50%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
+  /* margin: 0 auto; */
+  /* height: 100%; */
 }
 
 .project-text h2
 {
+  width: 50%;
+  margin: 0 auto;
   text-decoration: none;
   color: var(--whiteish);
 }
