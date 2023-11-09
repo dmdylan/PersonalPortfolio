@@ -12,7 +12,7 @@
 *
 {
   /* background: rgba(0, 100, 0, .1) !important; */
-  outline: 1px solid limegreen !important;
+  /* outline: 1px solid limegreen !important; */
 }
 
 html
@@ -123,18 +123,18 @@ body
   width: 100%;
   margin: 0 auto;
   padding: 5% 0 0;
-  background-color: var(--whiteish);
+  background-color: var(--blackish);
   min-height: 100vh;
 }
 
-.projects-section h2
+.projects-section > h2
 {
   position: relative;
   margin-top: 1000px;
   margin: 0;
   text-align: center;
   text-decoration: underline;
-  color: var(--blackish);
+  color: var(--whiteish);
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
 }
@@ -146,65 +146,48 @@ body
   min-height: 80vh;
   max-height: 80vh;
   margin: auto;
-  padding: 0 2rem;
-  background-color: var(--blackish);
+  padding: 2rem;
+  /* background-color: var(--blackish); */
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(25%, 30%);
+  grid-template-columns: repeat(4, auto);
+  grid-auto-rows: minmax(25%, 50%);
 }
 
 .project
 {
+  position: relative;
   width: 100%;
-  height: 100%;
-  /* height: min-content; */
-  border: 2px solid var(--whiteish);
-}
-
-.project-text
-{
-  width: 100%;
-  height: 100%;
-  /* margin: 0 auto; */
   /* height: 100%; */
+  outline: 4px solid var(--whiteish) !important;
+  border-radius: 2%;
+  overflow: hidden;
+  background-position:  center center;
+  background-repeat: no-repeat;
+  object-position: center;
+  cursor: pointer;
 }
 
-.project-text h2
+.project img
 {
-  width: 50%;
-  margin: 0 auto;
-  text-decoration: none;
-  color: var(--whiteish);
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
 }
 
-.project-img-container
+.project-title-header
 {
   position: absolute;
-  float: right;
+  font-family: 'Poppins', sans-serif;
+  bottom: 0;
+  left:0;
   right: 0;
-  width: 50%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-}
-
-.project-img-container img
-{
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 5%;
-  overflow: auto;
-  outline: 3px solid var(--light-blue) !important;
-}
-
-.project-img-container > img:hover{
-  cursor: pointer;
+  margin: 0 auto 2rem auto;
+  color: var(--);
+  text-align: center;
+  background-color: var(--red);
 }
 
 .contact-section
@@ -214,7 +197,7 @@ body
   margin: 0 auto;
   padding: 5% 0 0;
   background-color: var(--blackish);
-  min-height: 100vh;
+  min-height: 25vh;
 }
 
 .contact-section a
