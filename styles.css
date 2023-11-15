@@ -7,6 +7,11 @@
   --blackish: #262936;
   --blackish-transparent: #262936de;
 
+  --timberwolf: #cfcdc8ff;
+  --raisin-black: #1b1a28ff;
+  --platinum: #dee3e6ff;
+  --onyx: #3e3e48ff;
+  --silver: #b4aca5ff;
 }
 
 *
@@ -58,12 +63,12 @@ body
 {
   margin-right: 15px;
   font-family: 'Poppins', sans-serif;
-  color: var(--whiteish);
+  color: var(--raisin-black);
   font-size: 2.5rem;
-  border: 2px solid var(--whiteish);
+  border: 2px solid var(--raisin-black);
   border-radius: 5px;
   transition: all .1s ease-in-out;
-  background-color: var(--light-blue);
+  background-color: var(--platinum);
 }
 
 .nav-list li:hover
@@ -159,7 +164,7 @@ body
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 8rem;
-  color: var(--whiteish);
+  color: var(--platinum);
 }
 
 .welcome-section-headers h2
@@ -167,7 +172,7 @@ body
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 6rem;
-  color: var(--red);
+  color: var(--silver);
 }
 
 .welcome-section-headers h3
@@ -175,7 +180,7 @@ body
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
-  color: var(--light-blue)
+  color: var(--timberwolf)
 }
 
 .about-section
@@ -208,6 +213,8 @@ body
 
 .about-container
 {
+  display: flex;
+  flex-direction: column;
   width: 60%;
   max-height: 80vh;
   margin: auto;
@@ -224,21 +231,36 @@ body
   font-size: 5rem;
 }
 
-.about-me-inf0
+.about-me-info
 {
+  display: grid;
   width: 100%;
   height: 100%;
-
+  grid-template-columns: auto auto;
+  margin-bottom: 3rem;
 }
 
-.about-me-info > img
+.headshot-wrapper
 {
-  display: inline-block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 3rem;
+  border: solid 5px var(--light-blue);
 }
 
-.about-me-inf0 > p 
+.headshot-wrapper > img
 {
-  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.about-me-info > p
+{
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
+  margin-right: 3rem;
 }
 
 .contact-section
