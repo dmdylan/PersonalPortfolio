@@ -24,7 +24,7 @@ html
 {
   font-size: 62.5%;
   box-sizing: border-box;
-  color: var(--whiteish);
+  color: var(--platinum);
   scroll-behavior: smooth;
 
 }
@@ -35,6 +35,12 @@ body
   margin: auto;
   font-size: 1.8rem;
   background-color: var(--blackish);
+}
+
+a
+{
+  color: inherit;
+  text-decoration: none;
 }
 
 .page-wrapper
@@ -215,18 +221,22 @@ body
 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
+  min-height: 50vh;
   max-height: 80vh;
   margin: auto;
-  background-color: var(--blackish-transparent);
+  background-color: var(--onyx);
+  /* border-radius: 20px; */
+  border: 5px solid;
+  border-color: var(--timberwolf);
 }
 
 .about-container > h2
 {
-  margin: 0;
+  margin: 1.5rem 0 0 0;
   position: relative;
   text-align: center;
-  color: var(--whiteish);
+  color: var(--platinum);
   font-family: 'Poppins', sans-serif;
   font-size: 5rem;
 }
@@ -237,23 +247,24 @@ body
   width: 100%;
   height: 100%;
   grid-template-columns: auto auto;
-  margin-bottom: 3rem;
+  margin: auto;
 }
 
 .headshot-wrapper
 {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 3rem;
-  border: solid 5px var(--light-blue);
+  border: solid 5px var(--platinum);
 }
 
 .headshot-wrapper > img
 {
   width: 100%;
   height: auto;
+  margin-top: -10%;
 }
 
 .about-me-info > p
@@ -261,6 +272,8 @@ body
   font-family: 'Poppins', sans-serif;
   margin: auto;
   margin-right: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .contact-section
@@ -271,10 +284,4 @@ body
   padding: 5% 0 0;
   background-color: var(--blackish);
   min-height: 25vh;
-}
-
-.contact-section a
-{
-  color: inherit;
-  text-decoration: none;
 }
