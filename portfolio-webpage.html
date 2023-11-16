@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/headshot-favicon.png" />
     <script src="https://kit.fontawesome.com/9bef5ae416.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
@@ -22,9 +23,8 @@
       <section id="home" class="welcome-section">
         <div class="welcome-section-headers">
           <h1>Hey, I'm Dylan</h1>
-          <!-- <h2>I make things</h2> -->
-          <h3>&lt;code&gt; - GameDev - Prototyping - Editing</h3>
-          <div>
+          <h3>&lt;code&gt; - GameDev - Prototyping</h3>
+          <div class="external-links">
             <a
             id="profile-link" 
             class="contact-details-button"
@@ -40,18 +40,25 @@
             class="contact-details-button"
             target="_blank"
             href="https://twitter.com/SpartanFanDMD"
-            ><i class="fa-brands fa-square-twitter"></i> Twitter</a> 
+            ><i class="fa-brands fa-square-x-twitter"></i> Twitter</a> 
           </div>
         </div>
         <div class="gradient"></div>
         <img class="welcome-section-background-img" src="images/dylan-lake.jpg"/>
         <div class="button-container">
-          <button onclick="scrollToSection('about')">V</button>     
+          <button onclick="scrollToSection('about')">
+            <img src="images/undraw_straight-arrow.svg" />
+          </button>     
         </div>
       </section>
 
       <section id="about" class="about-section">
-        <img src="images/about-section-background.png" class="about-section-background"/>
+        <div class="button-container">
+          <button onclick="scrollToSection('home')">
+            <img src="images/undraw_straight-arrow.svg" />
+          </button>
+        </div>
+        <!-- <img src="images/about-section-background.png" class="about-section-background"/> -->
         <div class="about-container">
           <h2>About Me</h2>
           <div class="about-me-info">
@@ -66,25 +73,6 @@
             </p>
           </div>
         </div>
-      </section>
-
-      <section id="contact" class="contact-section">
-        <a
-        id="profile-link" 
-        class="contact-details-button"
-        target="_blank"
-        href="https://github.com/dmdylan"
-        ><i class="fa-brands fa-github"></i> GitHub</a>
-        <a
-        class="contact-details-button"
-        target="_blank"
-        href="https://spartanfandmd.itch.io/"
-        ><i class="fa-brands fa-itch-io"></i> itch.io</a>
-        <a
-        class="contact-details-button"
-        target="_blank"
-        href="https://twitter.com/SpartanFanDMD"
-        ><i class="fa-brands fa-square-twitter"></i> Twitter</a> 
       </section>
     </div>
   </body>
