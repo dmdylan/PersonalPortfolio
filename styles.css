@@ -308,8 +308,9 @@ a
 .headshot-wrapper > img
 {
   width: 100%;
-  height: auto;
-  margin-top: -10%;
+  height: 100%;
+  object-fit: cover;
+  /* margin-top: -10%; */
 }
 
 .about-me-info > p
@@ -333,17 +334,24 @@ a
   text-shadow: 2px 2px 0 black;
 }
 
+.contact-details-button
+{
+  cursor: pointer;
+}
+
 .form-overlay
 {
   position: fixed;
-  top: 10%;
-  left: 35%;
+  top: 50%;
+  left: 50%;
   width: 30%;
   height: 80vh;
   z-index: 7;
   border-radius: 20px;
   background-color: var(--light-blue);
   border: 7px solid var(--blue);
+  box-shadow: 2px 2px 2px black;
+  transform: translate(-50%, -50%);
 }
 
 .form-wrapper
@@ -367,22 +375,87 @@ a
 .form-container
 {
   display: block;
-  background-color: #0062FF;  
+  /* background-color: #0062FF;   */
   height: 100%;
   padding-bottom: 2rem;
+}
+
+.close-form-button
+{
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+
+.close-form-button button
+{
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  cursor: pointer;
+
 }
 
 form
 {
   display: grid;
-  gap: 2rem;
+  /* gap: 2rem; */
   height: 100%;
   flex-direction: column;
   text-align: center;
+  grid-auto-rows: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+form label
+{
+  align-self: center;
+}
+
+form input
+{
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 form textarea
 {
   grid-row: span 5;
+  resize: none;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  border: none;
+}
 
+form textarea::placeholder
+{
+  text-align: center;
+}
+
+form button
+{
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+}
+
+@media (max-width: 1024px){
+
+  .form-wrapper h2{
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1368px){
+
+  .form-wrapper h2{
+    font-size: 4rem;
+  }
 }
