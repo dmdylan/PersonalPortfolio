@@ -26,7 +26,7 @@ html
   font-size: 62.5%;
   box-sizing: border-box;
   color: var(--platinum);
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 
 }
 
@@ -141,18 +141,8 @@ a
   justify-content: center;
   align-items: center;
   z-index: 5;
-}
-
-.welcome-section .button-container
-{
   bottom: 0;
   margin-bottom: 1rem;
-}
-
-.about-section .button-container
-{
-  top: 0;
-  margin-top: 1rem;
 }
 
 .button-container img
@@ -168,7 +158,6 @@ a
   font-size: 4rem;
   font-family: 'Poppins', sans-serif;
   background-color: transparent;
-  color: var(--whiteish);
   border: 4px solid var(--whiteish);
   opacity: .6;
   transition: all .1s ease-in-out;
@@ -235,7 +224,7 @@ a
   isolation: isolate;
   /* background-color: #1b1a28; */
   opacity: 0.7;
-  background: repeating-linear-gradient( 45deg, #3e3e48, #3e3e48 3.5px, #1b1a28 3.5px, #1b1a28 17.5px );
+  background: repeating-linear-gradient( 45deg, #3e3e48, #3e3e48 5px, #1b1a28 3.5px, #1b1a28 35px );
 }
 
 .about-section > *
@@ -421,6 +410,7 @@ form input
   box-shadow: none;
   border: none;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 form textarea
