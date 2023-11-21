@@ -284,6 +284,7 @@ a
   grid-template-columns: 50% 50%;
   /* margin: auto auto 3rem auto; */
   justify-content: center;
+  padding-top: 1rem;
 }
 
 .headshot-wrapper
@@ -309,9 +310,9 @@ a
   font-family: 'Poppins', sans-serif;
   margin: auto;
   /* margin-right: auto; */
-  font-size: auto;
+  font-size: 2.2rem;
   text-align: center;
-  padding: 1rem;
+  padding-right: 5rem;
 }
 
 .external-links
@@ -461,8 +462,21 @@ form button
     height: 5rem;
   }
 
-  .button-container img{
-    /* scale: .8; */
+  .welcome-section .button-container img{
+    padding-top: 5px;
+  }
+
+    .about-section .button-container img{
+    padding-bottom: 5px;
+  }
+
+  .form-overlay{
+    width: 40%;
+    height: 70vh;
+  }
+
+  .about-container{
+    width: 80%;
   }
 }
 
