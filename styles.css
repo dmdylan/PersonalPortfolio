@@ -147,11 +147,16 @@ a
 
 .button-container img
 {
+  width: 100%;
+  height: 100%;
   scale: .8;
+  margin: auto;
+  vertical-align: center;
 }
 
 .button-container > button 
 {
+  position: relative;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -162,7 +167,6 @@ a
   opacity: .6;
   transition: all .1s ease-in-out;
   cursor: pointer;
-  text-align: center;
 }
 
 .button-container > button:hover
@@ -192,7 +196,6 @@ a
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 8rem;
-  /* color: var(--platinum); */
 }
 
 .welcome-section-headers h2
@@ -200,7 +203,6 @@ a
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 6rem;
-  /* color: var(--silver); */
 }
 
 .welcome-section-headers h3
@@ -438,8 +440,29 @@ form button
 
 @media (max-width: 1024px){
 
+  .welcome-section-headers h1{
+    font-size: 6rem;
+  }
+
+  .welcome-section-headers h3{
+    font-size: 2.5rem;
+  }
+
+  .external-links{
+    font-size: 1.5rem;
+  }
+
   .form-wrapper h2{
     font-size: 4rem;
+  }
+
+  .button-container > button{
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .button-container img{
+    /* scale: .8; */
   }
 }
 
