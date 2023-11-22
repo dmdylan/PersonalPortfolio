@@ -26,7 +26,7 @@ html
   font-size: 62.5%;
   box-sizing: border-box;
   color: var(--platinum);
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth 
 
 }
 
@@ -36,12 +36,25 @@ body
   margin: auto;
   font-size: 1.8rem;
   background-color: var(--blackish);
+  font-family: 'Poppins', sans-serif;
 }
 
 a
 {
   color: inherit;
   text-decoration: none;
+}
+
+h1{
+  font-size: clamp(3.5rem, 7vw, 8rem);
+}
+
+h2{
+  font-size: clamp(3rem, 5vw, 6rem);
+}
+
+h3{
+  font-size: clamp(1.5rem, 3vw, 4rem);
 }
 
 .page-wrapper
@@ -53,9 +66,9 @@ a
 
 .nav
 {
-  margin: auto;
   position: fixed;
   width: 30%;
+  margin: auto;
   z-index: 3;
 }
 
@@ -69,7 +82,6 @@ a
 .nav-list li
 {
   margin-right: 15px;
-  font-family: 'Poppins', sans-serif;
   color: var(--raisin-black);
   font-size: 2.5rem;
   border: 2px solid var(--raisin-black);
@@ -80,7 +92,6 @@ a
 
 .nav-list li:hover
 {
-  /* background-color: var(--light-blue); */
   transform: scale(1.1);
 }
 
@@ -89,6 +100,29 @@ a
   padding: 1.8rem;
   color: inherit;
   text-decoration: none;
+}
+
+@media (max-width: 720px){
+  .nav{
+    width: 100vw;
+    background-color: var(--blackish);
+    overflow: hidden;
+  }
+
+  .nav-list{
+    width: 100%;
+    padding-left: 0px;
+    justify-content: center;
+  }
+
+  .nav-list li{
+    font-size: 1.75rem;
+    border: none;
+    background: none;
+    margin-right: 0;
+    color: var(--platinum);
+    padding: 0;
+  }
 }
 
 .welcome-section
@@ -108,10 +142,8 @@ a
   top: 40%;
   width: 50%;
   z-index: 2;
-  text-shadow: 4px 4px 0 black;
   align-content: center;
   color: rgb(255, 166, 0);
-
 }
 
 .welcome-section-background-img
@@ -124,14 +156,39 @@ a
   overflow: hidden;
 }
 
-.gradient
+.welcome-section-headers h1
 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, var(--blackish), transparent);
-  z-index: 1;
+  margin: 0;
+  text-shadow: -2px 2px 0 #000,
+				        2px 2px 0 #000,
+				       2px -2px 0 #000,
+				      -2px -2px 0 #000;
 }
+
+.welcome-section-headers h2
+{
+  margin: 0;
+  /* font-size: 6rem; */
+}
+
+.welcome-section-headers h3
+{
+  margin: 0;
+  /* font-size: 3rem; */
+  text-shadow: 2px 2px 0 black;
+}
+
+.external-links
+{
+  display: flex;
+  justify-content: center;
+  /* font-size: 2rem; */
+  gap: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 black;
+}
+
+
 
 .button-container
 {
@@ -161,7 +218,6 @@ a
   height: 6rem;
   border-radius: 50%;
   font-size: 4rem;
-  font-family: 'Poppins', sans-serif;
   background-color: transparent;
   border: 4px solid var(--whiteish);
   opacity: .6;
@@ -191,35 +247,13 @@ a
   filter: invert();
 }
 
-.welcome-section-headers h1
-{
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: 8rem;
-}
 
-.welcome-section-headers h2
-{
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: 6rem;
-}
-
-.welcome-section-headers h3
-{
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
-  text-shadow: 2px 2px 0 black;
-
-  /* color: var(--timberwolf) */
-}
 
 .about-section
 {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   /* min-height: 100vh; */
   display: grid;
@@ -271,8 +305,7 @@ a
   position: relative;
   text-align: center;
   color: var(--platinum);
-  font-family: 'Poppins', sans-serif;
-  font-size: 5rem;
+  /* font-size: 5rem; */
   text-decoration: underline;
 }
 
@@ -307,7 +340,6 @@ a
 
 .about-me-info > p
 {
-  font-family: 'Poppins', sans-serif;
   margin: auto;
   /* margin-right: auto; */
   font-size: 2.2rem;
@@ -315,16 +347,7 @@ a
   padding-right: 5rem;
 }
 
-.external-links
-{
-  display: flex;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  gap: 3rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 0 black;
-}
+
 
 .contact-details-button
 {
@@ -360,8 +383,7 @@ a
 {
   margin: 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 6rem;
+  /* font-size: 6rem; */
 }
 
 .form-container
@@ -383,7 +405,6 @@ a
 {
   border: none;
   border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
   cursor: pointer;
@@ -398,7 +419,6 @@ form
   flex-direction: column;
   text-align: center;
   grid-auto-rows: auto;
-  font-family: 'Poppins', sans-serif;
 }
 
 form label
@@ -412,7 +432,6 @@ form input
   border-radius: 5px;
   box-shadow: none;
   border: none;
-  font-family: 'Poppins', sans-serif;
   
 }
 
@@ -420,7 +439,6 @@ form textarea
 {
   grid-row: span 5;
   resize: none;
-  font-family: 'Poppins', sans-serif;
   border-radius: 5px;
   border: none;
 }
@@ -435,18 +453,52 @@ form button
   margin-top: 10px;
   border-radius: 5px;
   border: none;
-  font-family: 'Poppins', sans-serif;
   font-size: 1.75rem;
 }
 
-@media (max-width: 1024px){
+@media(max-width: 720px){
+
+  .welcome-section-headers{
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: 100vh;
+    top:0%;
+  } 
 
   .welcome-section-headers h1{
-    font-size: 6rem;
+      padding-top: 7rem;
+      text-shadow: -1px 1px 0 #000,
+				        1px 1px 0 #000,
+				       1px -1px 0 #000,
+				      -1px -1px 0 #000;
+  }
+  
+  .external-links{
+    width: 100vw;
+    position: absolute;
+    bottom: 0%;
+    /* padding: 0 1rem; */
+  }
+
+  .welcome-section-background-img{
+    object-position: 75%;
+  }
+
+  .button-container{
+    display: none;
+  }
+}
+
+@media (min-width: 1024px){
+
+  .welcome-section-headers h1{
+    /* font-size: 6rem; */
   }
 
   .welcome-section-headers h3{
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
   }
 
   .external-links{
@@ -454,7 +506,7 @@ form button
   }
 
   .form-wrapper h2{
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
 
   .button-container > button{
@@ -480,9 +532,9 @@ form button
   }
 }
 
-@media (max-width: 1368px){
+@media (min-width: 1368px){
 
   .form-wrapper h2{
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
 }
