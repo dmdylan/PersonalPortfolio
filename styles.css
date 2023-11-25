@@ -5,7 +5,7 @@
   --red: #AB4562;
   --whiteish: #F6F9F9;
   --blackish: #262936;
-  --blackish-transparent: #262936de;
+  --blackish-transparent: #262936a8;
 
   --timberwolf: #cfcdc8ff;
   --raisin-black: #1b1a28ff;
@@ -27,6 +27,7 @@ html
   box-sizing: border-box;
   color: var(--platinum);
   scroll-behavior: smooth 
+  
 
 }
 
@@ -54,7 +55,7 @@ h2{
 }
 
 h3{
-  font-size: clamp(1.5rem, 3vw, 4rem);
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 
 .page-wrapper
@@ -249,13 +250,11 @@ h3{
   position: relative;
   width: 100%;
   min-height: 100vh;
-  max-height: fit-content;
+  /* max-height: fit-content; */
   margin: 0 auto;
-  /* min-height: 100vh; */
   display: grid;
   isolation: isolate;
-  /* background-color: #1b1a28; */
-  opacity: 0.7;
+  /* opacity: 0.3; */
   background-image: url("images/gaming-pattern.png"); 
   overflow: hidden;
 }
@@ -282,8 +281,7 @@ h3{
 {
   position: absolute;
   left: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -291,15 +289,14 @@ h3{
   margin-top: 5rem;
   min-height: 50vh;
   max-height: 70vh;
-  background-color: var(--onyx);
-  opacity: .6;
+  background-color: var(--blackish-transparent);
   border-radius: 20px;
   border: 5px solid;
   border-color: var(--timberwolf);
   padding-bottom: 3rem;
 }
 
-.about-container > h2
+.about-container > h3
 {
   margin: 1.5rem 0 1.5rem 0;
   position: relative;
@@ -322,9 +319,9 @@ h3{
 
 .headshot-wrapper
 {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  max-width: 70%;
+  aspect-ratio: 1/1;
+  border-radius: 25%;
   overflow: hidden;
   margin: auto;
   border: solid 5px var(--platinum);
@@ -340,7 +337,7 @@ h3{
 .about-me-info > p
 {
   margin: auto;
-  font-size: 2.2rem;
+  font-size: clamp(1rem, calc(2.5rem * 1vw), 4.5rem);
   text-align: center;
   padding-right: 5rem;
 }
@@ -477,7 +474,7 @@ form button
   .external-links{
     width: 100vw;
     position: absolute;
-    bottom: 0%;
+    bottom: 1%;
   }
 
   .welcome-section-background-img{
@@ -488,21 +485,25 @@ form button
     display: none;
   }
 
+  .about-section{
+  }
+
   .about-container{
     transform: translateX(-50%);
   }
 
   .about-me-info{
-    display: block;
+    grid-template-columns: 100%;
+    align-content: center;
   }
 
   .about-me-info > p{
+    font-size: 1rem;
     padding: 1rem;
-    font-size: auto;
   }
 
   .headshot-wrapper{
-    display: none;
+    /* max-width: 50%; */
   }
 }
 
