@@ -110,7 +110,6 @@ h3{
     width: 100%;
     padding: 0;
     background-color: var(--blackish);
-    overflow: hidden;
   }
 
   .nav-list{
@@ -471,7 +470,7 @@ form button
   }
 
   .about-container{
-    min-height: 85vh;
+    min-height: 80vh;
     max-height: 85vh;
   }
 
@@ -486,7 +485,8 @@ form button
   .about-me-info > p{
     text-align: center;
     margin: 0 auto;
-    font-size: clamp(.3em, calc(1em * 5vw), 5em);
+    font-size: .65em;
+    /* font-size: clamp(.3em, calc(1em * 1vw), 5em); */
     padding: 1rem;
   }
 
