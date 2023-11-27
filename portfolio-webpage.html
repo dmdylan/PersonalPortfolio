@@ -10,7 +10,6 @@
     <link rel="icon" href="images/headshot-favicon.png" />
     <script src="https://kit.fontawesome.com/9bef5ae416.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lcf0hQpAAAAAIQq2VgYWz3pWS7JD0hkiUpgw3jZ" async defer></script>
   </head>
   <body>
     <nav id="navbar" class="nav">
@@ -90,21 +89,12 @@
                 <input id="last-name" type="text" autocomplete="off"/>      
                 <label for="subject">Subject</label>
                 <textarea id="subject" placeholder="Send me a message" autocomplete="off"></textarea>  
-                <button id="form-submit-button"
-                    class="g-recaptcha"
-                    data-sitekey="6LdOnhYpAAAAABTO-NisZOqgKqV6uZNjTlbaHFp7"
-                    data-callback='onSubmitContactForm()'
-                    data-action='submit'
+                <button 
                     onclick="toggleContactForm()">
                   Submit
                 </button>
               </form>
             </div>
-            <p>
-              This site is protected by reCAPTCHA and the Google
-              <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-              <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-            </p>  
           </div>
       </div>
     </div>
