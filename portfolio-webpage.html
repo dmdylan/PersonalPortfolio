@@ -83,7 +83,7 @@
         <div class="form-wrapper">
           <h2>Get in touch!</h2>
             <div class="form-container">
-              <form id="contact-form" onsubmit="submitContactForm(); toggleContactForm()">
+              <form id="contact-form" action="http://httpbin.org/post" method="POST">
                 <label for="name">Name</label>
                 <input id="name" required type="text" autocomplete="off"/>
                 <label for="email">Email</label>
@@ -91,7 +91,7 @@
                 <label for="subject">Subject</label>
                 <textarea id="subject" required placeholder="Send me a message" autocomplete="off"></textarea>  
                 <div class="g-recaptcha" data-sitekey="6LdWZxYpAAAAALDbbSoSmgffNwWg-IFv93eEoEsA"></div>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
               </form>
             </div>
           </div>

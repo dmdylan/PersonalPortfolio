@@ -20,7 +20,7 @@ function toggleContactForm(){
     }
 }
 
-function submitContactForm(submitEvent){
-    window.alert("Submit button pressed, event listener works");
-    submitEvent.preventDefault();
-}
+// function submitContactForm(submitEvent){
+//     window.alert("Submit button pressed, event listener works");
+//     submitEvent.preventDefault();
+// }
