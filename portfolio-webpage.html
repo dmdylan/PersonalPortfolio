@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="images/headshot-favicon.png" />
     <script src="https://kit.fontawesome.com/9bef5ae416.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
@@ -82,17 +83,15 @@
         <div class="form-wrapper">
           <h2>Get in touch!</h2>
             <div class="form-container">
-              <form id="contact-form" action="https://www.google.com/recaptcha/api/siteverify" method="POST">
-                <label for="first-name">First Name</label>
-                <input id="first-name" type="text" autocomplete="off"/>
-                <label for="last-name">Last Name</label>
-                <input id="last-name" type="text" autocomplete="off"/>      
+              <form id="contact-form" onsubmit="submitContactForm(); toggleContactForm()">
+                <label for="name">Name</label>
+                <input id="name" required type="text" autocomplete="off"/>
+                <label for="email">Email</label>
+                <input id="email" required type="email" autocomplete="off"/>      
                 <label for="subject">Subject</label>
-                <textarea id="subject" placeholder="Send me a message" autocomplete="off"></textarea>  
-                <button 
-                    onclick="toggleContactForm()">
-                  Submit
-                </button>
+                <textarea id="subject" required placeholder="Send me a message" autocomplete="off"></textarea>  
+                <div class="g-recaptcha" data-sitekey="6LdWZxYpAAAAALDbbSoSmgffNwWg-IFv93eEoEsA"></div>
+                <button>Submit</button>
               </form>
             </div>
           </div>

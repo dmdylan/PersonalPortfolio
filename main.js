@@ -9,16 +9,18 @@ function onSubmitContactForm(token) {
 
 function toggleContactForm(){
     const contactFormElement = document.getElementById("contact-overlay");
+    const contactForm = document.getElementById("contact-form");
     
     if(contactFormElement.style.display !== "none"){
         contactFormElement.style.display = "none";
+        contactForm.reset();
     }
     else{
         contactFormElement.style.display = "";
-
     }
 }
 
-function hideContactForm(){
-    document.getElementById("contact-overlay").style.display = "none";
+function submitContactForm(submitEvent){
+    window.alert("Submit button pressed, event listener works");
+    submitEvent.preventDefault();
 }
