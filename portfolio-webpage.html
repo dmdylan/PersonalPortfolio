@@ -10,7 +10,6 @@
     <link rel="icon" href="images/headshot-favicon.png" />
     <script src="https://kit.fontawesome.com/9bef5ae416.js" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
     <nav id="navbar" class="nav">
@@ -83,19 +82,21 @@
         <div class="form-wrapper">
           <h2>Get in touch!</h2>
             <div class="form-container">
-              <form id="contact-form" action="http://httpbin.org/post" method="POST">
+              <form id="contact-form">
                 <label for="name">Name</label>
-                <input id="name" required type="text" autocomplete="off"/>
+                <input id="name" name="name"  required type="text" autocomplete="off"/>
                 <label for="email">Email</label>
-                <input id="email" required type="email" autocomplete="off"/>      
+                <input id="email" name="email"  required type="email" autocomplete="off"/>      
                 <label for="subject">Subject</label>
-                <textarea id="subject" required placeholder="Send me a message" autocomplete="off"></textarea>  
+                <textarea id="subject" name="subject"  required placeholder="Send me a message" autocomplete="off"></textarea>  
                 <div class="g-recaptcha" data-sitekey="6LdWZxYpAAAAALDbbSoSmgffNwWg-IFv93eEoEsA"></div>
                 <button type="submit">Submit</button>
-              </form>
+              </form>      
             </div>
           </div>
       </div>
     </div>
+    <script type="text/javascript" src="main.js"></script>
+
   </body>
 </html>
