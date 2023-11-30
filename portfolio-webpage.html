@@ -82,21 +82,26 @@
         <div class="form-wrapper">
           <h2>Get in touch!</h2>
             <div class="form-container">
-              <form id="contact-form">
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Honey Pot -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <input type="hidden" name="access_key" value="43cae582-c25e-4ca6-9c7b-cecc9ee4c00d">
                 <label for="name">Name</label>
                 <input id="name" name="name"  required type="text" autocomplete="off"/>
                 <label for="email">Email</label>
                 <input id="email" name="email"  required type="email" autocomplete="off"/>      
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject"  required placeholder="Send me a message" autocomplete="off"></textarea>  
-                <div class="g-recaptcha" data-sitekey="6LdWZxYpAAAAALDbbSoSmgffNwWg-IFv93eEoEsA"></div>
+                <label for="message">Subject</label>
+                <textarea id="subject" name="message"  required placeholder="Send me a message" autocomplete="off"></textarea>  
+                <div class="h-captcha" data-captcha="true"></div>
                 <button type="submit">Submit</button>
               </form>      
             </div>
           </div>
       </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
 
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

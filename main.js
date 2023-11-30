@@ -5,46 +5,30 @@ function scrollToSection(section){
     element.scrollIntoView(true);
 }
 
-function onSubmitContactForm(token) {
-    document.getElementById("contact-form").submit();
-}
-
 function toggleContactForm(){
     const contactFormElement = document.getElementById("contact-overlay");
     const contactForm = document.getElementById("contact-form");
-    
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]');
 
     if(contactFormElement.style.display !== "none"){
         contactFormElement.style.display = "none";
         contactForm.reset();
-        grecaptcha.reset();
+        hCaptcha.reset();
     }
     else{
         contactFormElement.style.display = "";
     }
 }
 
-const form = document.querySelector("form");
+const form = document.getElementById('contact-form');
+      
+form.addEventListener('submit', function(e) {
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
-    const captchaResponse = grecaptcha.getResponse();
-
-    if(!captchaResponse.length > 0){
-        throw new Error("captcha not completed");
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
     }
-
-    const fd = new FormData(e.target);
-    const params = new URLSearchParams(fd);
-
-    fetch("http://httpbin.org/post",{
-        method: "POST",
-        body: params,
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
-
-    toggleContactForm();
 });

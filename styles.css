@@ -438,7 +438,7 @@ form button
   font-size: clamp(1rem, 1.4rem, 4rem);
 }
 
-.g-recaptcha
+.h-captcha
 { 
   padding-top: 1rem;
   align-self: center;
@@ -510,7 +510,7 @@ form button
     aspect-ratio: 1/1;
   }
 
-  .g-recaptcha{
+  .h-captcha{
     transform: scale(.7);
   }
 }
