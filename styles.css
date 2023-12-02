@@ -5,7 +5,7 @@
   --red: #AB4562;
   --whiteish: #F6F9F9;
   --blackish: #262936;
-  --blackish-transparent: #262936a8;
+  --blackish-transparent: #262936de;
 
   --timberwolf: #cfcdc8ff;
   --raisin-black: #1b1a28ff;
@@ -146,7 +146,7 @@ h3{
   width: 50%;
   z-index: 2;
   align-content: center;
-  color: rgb(255, 166, 0);
+  color: rgb(30, 49, 110);
 }
 
 .welcome-section-background-img
@@ -185,7 +185,7 @@ h3{
   font-size: clamp(1rem, calc(1rem * 2vw), 8rem);
   gap: 3rem;
   font-weight: bold;
-  text-shadow: 2px 2px 0 black;
+  text-shadow: 1px 1px 0 black;
 }
 
 .button-container
@@ -467,7 +467,11 @@ form button
   .external-links{
     width: 100vw;
     position: absolute;
-    bottom: 1%;
+    bottom: 0%;
+    background-color: var(--blackish-transparent);
+    color: var(--platinum);
+    text-shadow: none;
+    font-weight: 400;
   }
 
   .welcome-section-background-img{
